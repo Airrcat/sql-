@@ -1,4 +1,4 @@
-﻿// 数据库插入语句生成器.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+// 数据库插入语句生成器.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
 #include <iostream>
@@ -9,56 +9,18 @@
 using namespace std;
 int main()
 {
-    char c[200] = "Insert into student values('g9940303', 'zhanghong', 'nv', '1985-02-08', 'g99402', 'dep_03', 'syhpq34h'); ";
-    printf("你想生成的语句条数");
-    int sum,d;
-    scanf_s("%d", &sum);
-    int i, l;
-    for (i = 0; i < sum; i++)
-    {
-        if (c[35] != '9')
-            c[35]++;
-        else
-        {
-            c[35] = '0'; c[34]++;
-        }
-        if (c[34] == '3')
-        {
-            c[34] = '0'; c[33]++;
-        }
-        if (c[33] >= '9')
-        {
-            c[33] = '0'; c[32]++;
-        }
-        if (i % 2 == 1)
-        {
-            c[53] = 'n'; c[54] = 'v';
-        }
-        else
-        {
-            c[53] = 'n'; c[54] = 'a';
-        }
-        if (c[67] == '3')
-        {
-            c[67] == '0'; c[68] == '0';
-        }
-
-        else if (c[65] != '9'&&c[64]=='0')
-        {
-            c[65]++;
-        }
-        c[78] = i % 5+'0';
-        c[88] = i % 5+'0';
-        switch (i % 5) {
-        case 0:c[62] = '3'; c[65] = '1'; c[68] = '0'; break;
-        case 1:c[62] = '4'; c[65] = '2'; c[68] = '1'; break;
-        case 2:c[62] = '6'; c[64] = '0'; c[67] = '1'; break;
-        case 3:c[62] = '7'; c[65] = '1'; c[68] = '1'; break;
-        case 4:c[62] = '8'; c[64] = '1'; c[67] = '3'; break;
-        }
-        
-        printf("%s\n", c);
-    }
+	int id = 9940303;
+	int id2 = 99402;
+	printf("你想生成的语句条数\n");
+	int sum, d;
+	scanf_s("%d", &sum);
+	int year, month, day;
+	for (int i = 0; i < sum; i++) {
+		year = 79 + rand() % 20;
+		month = rand() % 12 + 1;
+		day = rand() % 28 + 1;
+		printf("Insert into student values('g%d', 'zhanghong', 'nv', '19%2d-%02d-%02d', 'g%d', 'dep_%02d', 'syhpq34h');\n", id++, year, month, day, id2++, i);
+	}
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
