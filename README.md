@@ -1,6 +1,7 @@
 # sql-
 ### A small project about our schoolwork.
 ### My English is not well , thank you.
+# -------------------------------------------------------------------
 # This project is about the mysql insert sentence automatically create。
 
 # -------------------------------------------------------------------
