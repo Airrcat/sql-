@@ -10,4 +10,4 @@
 # And it can be used directly in mysql.
 # -------------------------------------------------------------------
 # update log
-## 2019.12.10 the beta edtion start .
+## <font color=#87CEEB>2019.12.10 The beta edtion start .</font>
